@@ -1,25 +1,43 @@
-import logo from './logo.svg';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+import React from 'react';
+import Search from './Components/Search';
+import ShowSerie from './Components/ShowSerie';
+import Title from './Components/Title';
 
-export default App;
+export default class App extends React.Component {
+  constructor() {
+    super()
+    this.state = {
+      series:""
+    }
+  }
+  search = (valor) => {
+    console.log(valor)
+    fetch(`http://localhost:3200/${valor}`)
+      .then((res) => { return res.json() })
+      .then((json) => {
+        console.log("Serie Buscada:", json)
+        
+        this.setState({series:json})
+      })
+  }
+  render() {
+    if(this.state.series === ""){
+      return (
+        <div className="container">
+          <Title/>
+          <Search search={this.search}/>
+        </div>
+      )
+    }else{
+      return (
+        <div className="container">
+          <Title/>
+          <Search search={this.search} />
+          <ShowSerie series={this.state.series || []}/>
+        </div>
+      )
+    }
+  }
+}
