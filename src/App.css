@@ -7,20 +7,23 @@ body {
   width: 700px;
   font-size: 18px;
 }
+
 .container-search{
   display: flex;
   margin-left: 230px;
 }
+
 .container-series{
   margin-top: 30px;;
 }
+
 .container-title{
   font-family: Arial, Helvetica, sans-serif;
   font-size: 50px;
 }
 /*----------------------------------------------------------->*/
 .button-buscador{
-  background-color: orange;
+  background-color: rgb(238, 255, 0);
   color: black;
   font-size: 1.2rem;
   font-weight: 700;
@@ -42,7 +45,7 @@ body {
 
 /*Titulo ------------------------------------------------------->>*/
 .div-titulo{
-  background-color:orange;
+  background-color: rgb(251, 255, 0);;
   padding: 20px;
   border-radius: 10px;
   border-radius: 10px 10px 10px 10px;
@@ -51,13 +54,18 @@ body {
   width: 100%
 }
 
-.h1-titulo{
-  font-weight: 500;
+.h5-titulo{
   text-align: center;
+  color:  rgb(251, 255, 0);
+  font-size: 45px;
+  text-shadow: -2px -2px 1px #000;
 }
 
 .p-titulo{
   text-align: center;
+  font-size: 18px;
+  text-shadow: -2px -2px 1px #000;
+  color:rgb(238, 255, 0)
 }
 /*-------------------------------------------------------------------------------->*/
 
@@ -68,4 +76,18 @@ body {
 .card-text{
   color:black;
   font-size: 17px
+}
+
+.carousel-item{
+	background-color: black;
+	height: 80vh;
+	top: 0;
+	left: 0;
+	margin-top: -3.9rem;
+	width: 100%;
+}
+
+#carouselExampleCaptions{
+  margin-bottom: 1.2rem;
+  border: 6px solid  rgb(251, 255, 0);
 }

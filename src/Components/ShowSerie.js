@@ -17,9 +17,8 @@ export default class ShowSerie extends React.Component {
                         </div>
                     </div>
                 </div>
-            </div>:<span></span>}
-            
-            </div>
+            </div>:<span></span>}   
+        </div>
         )
     }
 }
