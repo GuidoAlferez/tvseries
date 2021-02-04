@@ -91,3 +91,7 @@ body {
   margin-bottom: 1.2rem;
   border: 6px solid  rgb(251, 255, 0);
 }
+
+.card-title{
+  color:black
+}
